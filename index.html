@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Produits</title>
+    <!-- Intégration de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://www.stao-eu.fr/wp-content/uploads/2023/02/risques-gestion-stock.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.7); 
+            border: none;
+        }
+        .card-header {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .card-body {
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-warning, .btn-danger {
+            border: none;
+        }
+        .list-group-item {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Gestion de Produits</h1>
+        <div class="card mb-4">
+            <div class="card-header">
+                Ajouter un produit
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="productName" placeholder="Nom du produit">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="productPrice" placeholder="Prix du produit">
+                </div>
+                <button class="btn btn-success  " onclick="addProduct()">Confirmer votre produit</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Produits
+            </div>
+            <ul class="list-group list-group-flush" id="productList"></ul>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+    <!-- Intégration de Bootstrap JS et dépendances -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
